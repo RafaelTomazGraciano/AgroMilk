@@ -54,6 +54,7 @@ public class Dao <T> {
      * @param valor o valor da chave
      * @return O objeto correspondente à chave ou null caso não exista.
      */
+
     public T buscarPorChave(String chave, String valor){
          T retorno = collection.find(new Document(chave, valor)).first();
          return retorno;
