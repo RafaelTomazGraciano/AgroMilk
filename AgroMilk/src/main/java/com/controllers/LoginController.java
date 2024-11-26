@@ -41,8 +41,7 @@ public class LoginController {
             alert.setContentText("Nome de usuario incorreto");
             alert.show();
         }
-        String hashSenha = GerenciadorDeSenhas.gerarHashSenha(senha.getText());
-        if (!GerenciadorDeSenhas.verificarSenha(user.getSenha(), hashSenha)){
+        if (GerenciadorDeSenhas.verificarSenha(senha.getText(), user.getSenha())){
             try{
                 App.trocarTela("menu.fxml");
             }
