@@ -9,7 +9,7 @@ class DaoTest {
 
     @Test
     public void testInserirUsuario() {
-        Usuario user = new Usuario("Rafael", GerenciadorDeSenhas.gerarHashSenha("abcd1234"));
+        Usuario user = new Usuario("Rafael", GerenciadorDeSenhas.gerarHashSenha("123"));
         Dao<Usuario> dao = new Dao(Usuario.class);
         dao.inserir(user);
 
